@@ -1,9 +1,19 @@
 body{
-    background-color: silver;
+    background-color: white;
     margin: 50px;
 }
 
 .Title{
     height: 500px;
+}
+
+#Jokes{
+    border: 20px black;
+    background-color: rgba(216, 206, 206, 0.792);
+    width: 300px;
+}
+
+#Joke{
+    margin-left: 20px;
 }
 

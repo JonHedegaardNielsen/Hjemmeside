@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
     <head>
-        
-        <link rel="stylesheet" href="C:\Users\jon23\OneDrive\Skrivebord\ClientsideProgrammering\css.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="CSS.css">
     </head>
     <body>
         <img src="C:\Users\jon23\OneDrive\Billeder\Filmrulle\Lars.png" alt="Lars">
@@ -10,14 +12,32 @@
             Velkommen til Larses dårlige Jokes
         </h1>
         
-        <input id="checkbox" type="checkbox" title="input">
         
-        <ul aria-sort="descending"> 
-            <li>dav</li>
+        <input type="text" name="search" id="searchInput" placeholder="search...">
+        <ul id="Jokes"> 
+            <li id="Joke">dav</li>
             
-            <li>me</li>
+            <li id="Joke">me</li>
         </ul>
-
+        <script>
+            const searchInput = document.getElementById('searchInput');
+            const list = document.getElementById('Jokes');
+            const items = list.getElementsByTagName('li');
+    
+            searchInput.addEventListener('input', function(event) {
+                const searchTerm = event.target.value.toLowerCase();
+    
+                Array.from(items).forEach(function(item) {
+                    const text = item.textContent.toLowerCase();
+                    if (text.includes(searchTerm)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        </script>
+        <script>src="Search.js"</script>
 
     </body>
 </html>
