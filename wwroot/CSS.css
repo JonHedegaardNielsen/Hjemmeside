@@ -1,16 +1,48 @@
 body{
     background-color: white;
     margin: 50px;
+    
 }
 
-.Title{
-    height: 500px;
+h1{
+    font-size: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.wrapper{
+    /* padding-bottom: 30px; */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 10px;
+    background-color: lightblue;
+    box-shadow: 0 4px 8px black;
+}
+
+.input-group input{
+    width: 100%;
+    padding: 10px 30px 10px 10px;
+    font-size: #222;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+}
+
+.input-group i {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    color: #222;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+#searchInput{
+    width: 40%;
 }
 
 #Jokes{
-    border: 20px black;
-    background-color: rgba(216, 206, 206, 0.792);
-    width: 300px;
+    padding-bottom: 20px;
 }
 
 #Joke{

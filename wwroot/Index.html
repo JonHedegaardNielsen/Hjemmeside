@@ -1,43 +1,55 @@
 <!DOCTYPE html>
 
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="CSS.css">
-    </head>
-    <body>
-        <img src="C:\Users\jon23\OneDrive\Billeder\Filmrulle\Lars.png" alt="Lars">
-        <h1 style="size: 500px;">
-            Velkommen til Larses dårlige Jokes
-        </h1>
-        
-        
-        <input type="text" name="search" id="searchInput" placeholder="search...">
-        <ul id="Jokes"> 
-            <li id="Joke">dav</li>
-            
-            <li id="Joke">me</li>
-        </ul>
-        <script>
-            const searchInput = document.getElementById('searchInput');
-            const list = document.getElementById('Jokes');
-            const items = list.getElementsByTagName('li');
-    
-            searchInput.addEventListener('input', function(event) {
-                const searchTerm = event.target.value.toLowerCase();
-    
-                Array.from(items).forEach(function(item) {
-                    const text = item.textContent.toLowerCase();
-                    if (text.includes(searchTerm)) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            });
-        </script>
-        <script>src="Search.js"</script>
+<html>
 
-    </body>
+<head>
+    <link rel="stylesheet" href="CSS.css">
+</head>
+
+<body>
+    <img src="C:\Users\jon23\OneDrive\Billeder\Filmrulle\Lars.png" alt="Lars">
+    <h1>
+        Velkommen til Larses dårlige Jokes
+    </h1>
+
+    <div class="wrapper">
+        <label for=""></label>
+        <input type="search" name="search" id="searchInput" placeholder="search..." margin="30px">
+        <div id="Jokes">
+            <ul>
+                <li id="Joke">Hvad kalder man en indbagt haj
+                    – haj med dej</li>
+                <li id="Joke"> Jeg overvejer at gifte mig med en tysker er det over grænsen?</li>
+                <li id="Joke">Hvad sagde børnene der legede gemmeleg på McDonald’s ?
+                    – Pom frit frem</li>
+                <li id="Joke">det godt prisen på skyr er ikke gået helt op til skyrene</li>            
+                <li>jo less less man kan jo bedre</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const list = document.getElementById('Jokes');
+        const items = list.getElementsByTagName('li');
+
+        searchInput.addEventListener('input', function (event) {
+
+            const searchTerm = event.target.value.toLowerCase();
+
+            Array.from(items).forEach(function (item) {
+                const text = item.textContent.toLowerCase();
+
+                if (text.includes(searchTerm)) {
+                    item.style.display = 'block';
+                }
+                else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+</body>
+
 </html>
